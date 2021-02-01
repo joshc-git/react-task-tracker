@@ -8,7 +8,18 @@ import About from './components/About'
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false)
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState([{
+    "id": 1,
+    "text": "Doctors Appointment",
+    "day": "Feb 5th at 2:30pm",
+    "reminder": true
+  },
+  {
+    "text": "Kitesurf",
+    "day": "Friday",
+    "reminder": false,
+    "id": 3
+  }])
 
   useEffect(() => {
     const getTasks = async () => {
